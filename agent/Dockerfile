@@ -23,6 +23,5 @@ RUN apt-get update && \
     curl -s -L https://get.docker.com/builds/Linux/x86_64/docker-1.6.0 > /usr/bin/docker; chmod +x /usr/bin/docker && \
     curl -s -L https://get.docker.com/builds/Linux/x86_64/docker-1.9.1 > /usr/bin/docker-1.9; chmod +x /usr/bin/docker-1.9
 
-
-ENTRYPOINT ["/run.sh"]
-LABEL "io.spikes.container.system"="agent"
+LABEL "io.spikes.container.system"="rancher-agent"
+ENV HOST_DOCKER_SOCK /var/run/docker.sock

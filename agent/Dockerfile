@@ -27,5 +27,5 @@ RUN apt-get update && \
 RUN curl http://downloads.drone.io/drone-cli/drone_linux_amd64.tar.gz | tar zx
 RUN install -t /usr/local/bin drone
 
-LABEL "io.spikes.container.system"="rancher-agent"
+LABEL "io.spikes.container.system"="build-agent"
 ENV HOST_DOCKER_SOCK /var/run/docker.sock
